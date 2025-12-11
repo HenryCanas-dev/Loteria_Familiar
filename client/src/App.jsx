@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import io from 'socket.io-client';
+import socket from './socket';
 import Home from './components/Home';
 import Game from './components/Game';
 
