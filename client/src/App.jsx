@@ -5,11 +5,7 @@ import Game from './components/Game';
 
 import { io } from 'socket.io-client';
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "";
-
-const socket = SOCKET_URL 
-  ? io(SOCKET_URL)                    // producción (Vercel)
-  : io();                             // desarrollo (localhost)
+const socket = io(window.location.origin);  // conecta al mismo dominio (funciona en local y producción)
 
 export default socket;
 
