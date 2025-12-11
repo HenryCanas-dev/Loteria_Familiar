@@ -5,7 +5,9 @@ import Game from './components/Game';
 
 import { io } from 'socket.io-client';
 
-const socket = io(window.location.origin);  // conecta al mismo dominio (funciona en local y producción)
+import { io } from 'socket.io-client';
+
+const socket = io(); // ← así funciona en local y en Vercel
 
 export default socket;
 
