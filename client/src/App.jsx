@@ -1,14 +1,7 @@
 import { useState } from 'react';
-import socket from './socket';
+import socket from './socket';  // ← solo esta línea importa el socket
 import Home from './components/Home';
 import Game from './components/Game';
-
-import { io } from 'socket.io-client';
-
-import { io } from 'socket.io-client';
-
-const socket = io(); // ← así funciona en local y en Vercel
-
 
 function App() {
   const [gameState, setGameState] = useState({
@@ -26,13 +19,15 @@ function App() {
       {!gameState.inGame ? (
         <Home socket={socket} onEnterGame={enterGame} />
       ) : (
-        <Game 
-          socket={socket} 
-          roomId={gameState.roomId} 
-          isHost={gameState.isHost} 
+        <Game
+          socket={socket}
+          roomId={gameState.roomId}
+          isHost={gameState.isHost}
         />
       )}
     </>
   );
 }
+
+export default App;
 
