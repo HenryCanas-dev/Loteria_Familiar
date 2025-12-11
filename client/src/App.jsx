@@ -9,7 +9,6 @@ import { io } from 'socket.io-client';
 
 const socket = io(); // ← así funciona en local y en Vercel
 
-export default socket;
 
 function App() {
   const [gameState, setGameState] = useState({
@@ -37,4 +36,3 @@ function App() {
   );
 }
 
-export default App;
