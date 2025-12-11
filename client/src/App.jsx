@@ -3,7 +3,15 @@ import io from 'socket.io-client';
 import Home from './components/Home';
 import Game from './components/Game';
 
-const socket = io('http://localhost:3000');
+import { io } from 'socket.io-client';
+
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "";
+
+const socket = SOCKET_URL 
+  ? io(SOCKET_URL)                    // producción (Vercel)
+  : io();                             // desarrollo (localhost)
+
+export default socket;
 
 function App() {
   const [gameState, setGameState] = useState({
