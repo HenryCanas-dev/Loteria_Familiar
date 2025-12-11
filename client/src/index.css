@@ -1,0 +1,172 @@
+/* src/index.css - ESTILO STAR WARS ÉPICO (SIN ERRORES) */
+
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000428, #004e92);
+  color: #00ffff;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+.home-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, white 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.1;
+  animation: stars 200s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes stars {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+.title {
+  font-size: 8rem;
+  font-weight: 900;
+  margin-bottom: 60px;
+  color: #00ffff;
+  text-shadow: 0 0 40px #00ffff, 0 0 80px #00ffff;
+  letter-spacing: 15px;
+}
+
+.nickname-input {
+  padding: 30px 60px;
+  font-size: 3rem;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 60px;
+  border: 6px solid #00ffff;
+  background: rgba(0,0,0,0.7);
+  color: #00ffff;
+  margin-bottom: 80px;
+  box-shadow: 0 0 40px #00ffff;
+  outline: none;
+}
+
+.btn-quick {
+  padding: 50px 140px;
+  font-size: 5.5rem;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  margin: 80px 0;
+  box-shadow: 0 0 80px #ff00ff;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.btn-quick:hover {
+  transform: scale(1.1);
+}
+
+.separator {
+  font-size: 4rem;
+  margin: 100px 0;
+  opacity: 0.7;
+}
+
+.upload-section {
+  margin: 80px 0;
+}
+
+.file-input {
+  padding: 40px;
+  font-size: 2.5rem;
+  background: rgba(255,255,255,0.15);
+  color: #00ffff;
+  border: 5px dashed #00ffff;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+.image-count {
+  font-size: 3rem;
+  color: white;
+  margin-top: 40px;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 60px;
+  margin: 100px auto;
+  max-width: 1600px;
+  padding: 0 20px;
+}
+
+.preview-img {
+  width: 100%;
+  border-radius: 40px;
+  border: 8px solid #00ffff;
+  box-shadow: 0 0 60px #00ffff;
+}
+
+.name-input {
+  margin-top: 30px;
+  padding: 20px;
+  width: 100%;
+  font-size: 2.5rem;
+  background: rgba(0,0,0,0.8);
+  border: 4px solid #ff00ff;
+  border-radius: 30px;
+  color: #ff00ff;
+  text-align: center;
+  box-shadow: 0 0 20px #ff00ff;
+}
+
+.btn-create {
+  padding: 50px 120px;
+  font-size: 4.5rem;
+  background: #ff1744;
+  color: white;
+  border: none;
+  border-radius: 80px;
+  cursor: pointer;
+  margin: 100px 0;
+  box-shadow: 0 0 80px #ff1744;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.btn-create:disabled {
+  background: #333;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.join-section {
+  margin-top: 120px;
+}
+
+.code-input {
+  padding: 40px 80px;
+  font-size: 4rem;
+  background: rgba(0,0,0,0.7);
+  border: 6px solid #00ffff;
+  border-radius: 60px;
+  color: #00ffff;
+  width: 500px;
+  max-width: 90%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.btn-join {
+  padding: 40px 100px;
+  font-size: 4.5rem;
+  background: #2ed573;
+  color: white;
+  border: none;
+  border-radius: 80px;
+  cursor: pointer;
+  box-shadow: 0 0 70px #2ed573;
+}
