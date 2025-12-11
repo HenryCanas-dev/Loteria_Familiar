@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid';
 const defaultNames = ["Darth Vader", "Luke Skywalker", "Yoda", "Princesa Leia", "Han Solo", "Chewbacca", "R2-D2", "C-3PO", "Boba Fett"];
 const nombresMexicanos = ["El Gallo", "El Diablito", "La Dama", "El Catrín", "El Paraguas", "La Sirena", "La Escalera", "La Botella", "El Barril"];
 
-export default function Home({ socket, onEnterGame }) {
+function Home({ socket, onEnterGame }) {
   const [nickname, setNickname] = useState('');
   const [images, setImages] = useState([]);
   const [customNames, setCustomNames] = useState({});
