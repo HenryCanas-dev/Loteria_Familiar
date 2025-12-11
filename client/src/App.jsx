@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import socket from './socket';  // ← solo esta línea importa el socket
+import socket from './socket';
 import Home from './components/Home';
 import Game from './components/Game';
 
@@ -30,4 +30,3 @@ function App() {
 }
 
 export default App;
-
